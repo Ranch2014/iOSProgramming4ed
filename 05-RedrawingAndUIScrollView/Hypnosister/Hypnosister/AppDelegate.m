@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "BNRHypnosisView.h"
-#import "BNRHypnosisViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,21 +19,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-//    BNRHypnosisViewController *controller = [[BNRHypnosisViewController alloc] init];
-//    self.window.rootViewController = controller;
-    
-//    CGRect firstFrame = CGRectMake(100, 100, 100, 200);
-//    BNRHypnosisView *bnr = [[BNRHypnosisView alloc] initWithFrame:firstFrame];
-//    bnr.backgroundColor = [UIColor redColor];
-    
-//    self.window.rootViewController = bnr;
-    
-//    [self.window addSubview:bnr];
+//    CGRect screenRect = self.window.bounds;
+//    CGRect bigRect = screenRect;
+//    bigRect.size.width *= 2.0;
+//    bigRect.size.height *= 2.0;
 //    
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    [self.window makeKeyAndVisible];
+//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+//    [self.window addSubview:scrollView];
+//    
+//    BNRHypnosisView *hy = [[BNRHypnosisView alloc] initWithFrame:bigRect];
+//    [scrollView addSubview:hy];
+//    
+//    scrollView.contentSize = bigRect.size;
     
     return YES;
 }

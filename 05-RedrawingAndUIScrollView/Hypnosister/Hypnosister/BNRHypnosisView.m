@@ -8,6 +8,10 @@
 
 #import "BNRHypnosisView.h"
 
+@interface BNRHypnosisView ()
+@property (strong, nonatomic) UIColor *circleColor;
+@end
+
 @implementation BNRHypnosisView
 
 /*
@@ -23,6 +27,7 @@
     if (self) {
         // 设置 BNRHypnosisView 对象的背景颜色为透明
         self.backgroundColor = [UIColor clearColor];
+        self.circleColor = [UIColor lightGrayColor];
     }
     return self;
 }
@@ -54,7 +59,7 @@
     CGPoint endPoint;
     endPoint.x = center.x + 100;
     endPoint.y = center.y + 100;
-    CGContextDrawLinearGradient(currentContext, gradient, startPoint, endPoint, kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
+//    CGContextDrawLinearGradient(currentContext, gradient, startPoint, endPoint, kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
     // CGGradientCreateWithColorComponents 函数的最后一个参数用来设置起始位置和终止位置之外的绘制区域的颜色填充方式。可用 kCGGradientDrawsBeforeStartLocation 或 kCGGradientDrawsAfterEndLocation, 或二者结合使用
 
     CGGradientRelease(gradient);
@@ -72,7 +77,7 @@
     // 根据视图宽和高中的较小值计算圆形的半径
 //    float radius = (MIN(bounds.size.width, bounds.size.height) / 2.0);
     
-    float maxRadius = hypot(bounds.size.width, bounds.size.height) / 2.0;
+    float maxRadius = hypot(bounds.size.width, bounds.size.height) / 2.0; //这里的最大半径为屏幕对角线
     
     // UIBezierPath 类用来绘制直线或曲线，从而绘制各种形状
     UIBezierPath *path = [[UIBezierPath alloc] init];
@@ -98,9 +103,9 @@
     // 设置线条宽度为 10 点
     path.lineWidth = 10;
 
-    // 设置绘制颜色为浅灰色
-    [[UIColor lightGrayColor] setStroke];
-    [[UIColor orangeColor] setStroke];
+//    [[UIColor lightGrayColor] setStroke]; // 设置绘制颜色为浅灰色
+//    [[UIColor orangeColor] setStroke];
+    [self.circleColor setStroke];
     
     // 绘制路径
     [path stroke];
@@ -134,5 +139,25 @@
 //    
 ////    CGContextSetStrokeColorWithColor(currentContext, [UIColor redColor]);
 //}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"-- %@ was touched", self);
+    
+    // 获取三个0到1之间的数字
+    float red = (arc4random() % 100) / 100.0;
+    float green = (arc4random() % 100) / 100.0;
+    float blue = (arc4random() % 100) / 100.0;
+    UIColor *randomColor = [UIColor colorWithRed:red
+                                           green:green
+                                            blue:blue
+                                           alpha:1.0];
+    self.circleColor = randomColor;
+    [self setNeedsDisplay];
+}
+
+- (void)setCircleColor:(UIColor *)circleColor {
+    _circleColor = circleColor;
+    [self setNeedsDisplay]; //相当于标记该视图需要重绘
+}
 
 @end
