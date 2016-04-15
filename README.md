@@ -3,8 +3,10 @@
 
 
 第 1 章  第一个简单的 iOS 应用  
+第 2 章  Objective-C  
 第 4 章  视图与视图层次结构  
 第 5 章  视图：重绘与 UIScrollView  
 第 6 章  视图控制器  
+第 7 章  委托与文本输入  
 
 原书代码地址：[https://github.com/dingdaojun/iOSProgramming4ed](https://github.com/dingdaojun/iOSProgramming4ed)
