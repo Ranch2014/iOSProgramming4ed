@@ -40,13 +40,17 @@
     
     UIView *header = self.headerView;
     [self.tableView setTableHeaderView:header];
+//    self.tableView.tableHeaderView = header;
 }
 
 - (IBAction)addNewItem:(id)sender {
     // 创建 NSIndexPath 对象，代表的位置是：第一个表格段，最后一个表格行
 //    NSInteger lastRow = [self.tableView numberOfRowsInSection:0];
     
+    // 创建新的 BNRItem 对象并将其加入到 BNRItemStore 对象
     BNRItem *newItem = [[BNRItemStore sharedStore] createItem];
+
+    // 获取新创建的对象在 allItems 数组中的索引
     NSInteger lastRow = [[[BNRItemStore sharedStore] allItems] indexOfObject:newItem];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
@@ -57,7 +61,7 @@
 
 - (IBAction)toggleEditingModel:(id)sender {
     // 若已经处于编辑模式
-    if (self.editing) {
+    if (self.isEditing) {
         [sender setTitle:@"Edit" forState:UIControlStateNormal];
         [self setEditing:NO animated:YES]; //关闭编辑模式
     } else {
@@ -69,7 +73,7 @@
 - (UIView *)headerView {
     // 如果还没有载入 headerview ...
     if (!_headerView) {
-        // 载入 HeaderView.xib  (就是这个方法的问题。。。)
+        // 载入 HeaderView.xib
         [[NSBundle mainBundle] loadNibNamed:@"HeaderView"
                                       owner:self
                                     options:nil];
@@ -112,6 +116,7 @@
     return cell;
 }
 
+/** 删除或插入行 */
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 如果 UITableView 对象请求确认的是删除操作……
@@ -126,10 +131,17 @@
     }
 }
 
+/** 移动一行 */
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
     [[BNRItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row
                                         toIndex:destinationIndexPath.row];
+}
+
+/** 自定义删除确认按钮的标题(默认为 "Delete") */
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"Remove";
 }
 
 @end
