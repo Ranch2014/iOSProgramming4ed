@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		467D17321CB92F1800F35902 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467D17311CB92F1800F35902 /* main.m */; };
 		467D17351CB92F1800F35902 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467D17341CB92F1800F35902 /* AppDelegate.m */; };
-		467D17381CB92F1800F35902 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467D17371CB92F1800F35902 /* ViewController.m */; };
-		467D173B1CB92F1800F35902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467D17391CB92F1800F35902 /* Main.storyboard */; };
 		467D173D1CB92F1800F35902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467D173C1CB92F1800F35902 /* Assets.xcassets */; };
 		467D17401CB92F1800F35902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467D173E1CB92F1800F35902 /* LaunchScreen.storyboard */; };
 		467D174B1CB92F1800F35902 /* QuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 467D174A1CB92F1800F35902 /* QuizTests.m */; };
@@ -41,9 +39,6 @@
 		467D17311CB92F1800F35902 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		467D17331CB92F1800F35902 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467D17341CB92F1800F35902 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		467D17361CB92F1800F35902 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		467D17371CB92F1800F35902 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		467D173A1CB92F1800F35902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		467D173C1CB92F1800F35902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		467D173F1CB92F1800F35902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467D17411CB92F1800F35902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,9 +106,6 @@
 				467D17631CB92F5A00F35902 /* BNRQuizViewController.h */,
 				467D17641CB92F5A00F35902 /* BNRQuizViewController.m */,
 				467D17651CB92F5A00F35902 /* BNRQuizViewController.xib */,
-				467D17361CB92F1800F35902 /* ViewController.h */,
-				467D17371CB92F1800F35902 /* ViewController.m */,
-				467D17391CB92F1800F35902 /* Main.storyboard */,
 				467D173C1CB92F1800F35902 /* Assets.xcassets */,
 				467D173E1CB92F1800F35902 /* LaunchScreen.storyboard */,
 				467D17411CB92F1800F35902 /* Info.plist */,
@@ -254,7 +246,6 @@
 				467D17671CB92F5A00F35902 /* BNRQuizViewController.xib in Resources */,
 				467D17401CB92F1800F35902 /* LaunchScreen.storyboard in Resources */,
 				467D173D1CB92F1800F35902 /* Assets.xcassets in Resources */,
-				467D173B1CB92F1800F35902 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +271,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				467D17661CB92F5A00F35902 /* BNRQuizViewController.m in Sources */,
-				467D17381CB92F1800F35902 /* ViewController.m in Sources */,
 				467D17351CB92F1800F35902 /* AppDelegate.m in Sources */,
 				467D17321CB92F1800F35902 /* main.m in Sources */,
 			);
@@ -318,14 +308,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		467D17391CB92F1800F35902 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				467D173A1CB92F1800F35902 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		467D173E1CB92F1800F35902 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

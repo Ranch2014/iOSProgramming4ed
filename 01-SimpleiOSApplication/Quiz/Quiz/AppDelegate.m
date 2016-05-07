@@ -19,14 +19,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [self setRootView];
+    [self.window makeKeyAndVisible];
+    
+    return YES;
+}
+
+/** 设置根目录 */
+- (void)setRootView {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     BNRQuizViewController *qvc = [[BNRQuizViewController alloc] init];
     self.window.rootViewController = qvc;
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
-    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

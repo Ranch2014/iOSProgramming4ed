@@ -35,25 +35,22 @@
                          @"14",
                          @"Beijing"];
     }
+    
     // 返回新对象的地址
     return self;
 }
 
 - (IBAction)showQuestion:(id)sender {
-    // 进入下一个问题
-    NSLog(@"%d", self.currentQuestionIndex);
-    self.currentQuestionIndex ++;
+    self.currentQuestionIndex ++; // 进入下一个问题
     
     if (self.currentQuestionIndex == [self.questions count]) {
-        // 回到第一个问题
-        self.currentQuestionIndex = 0;
+        self.currentQuestionIndex = 0; // 回到第一个问题
     }
-//    NSLog(@"%d", self.currentQuestionIndex);
+
     NSString *question = self.questions[self.currentQuestionIndex];
-    self.questionLabel.text = question; //Q: 这里的问题是从第一个开始的？？
+    self.questionLabel.text = question; //Q: 这里的问题是从第一个开始的
     
-    // 设置答案字符串
-    self.answerLabel.text = @"???";
+    self.answerLabel.text = @"???"; // 设置答案字符串(即,显示答案后,再显示新问题时答案区域改为???)
 }
 
 - (IBAction)showAnswer:(id)sender {
