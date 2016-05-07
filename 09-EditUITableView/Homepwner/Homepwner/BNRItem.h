@@ -9,12 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface BNRItem : NSObject
-{
-    NSString *_itemName;
-    NSString *_serialNumber;
-    int _valueInDollars;
-    NSDate *_dateCreated; //只读，没有 setter 方法
-}
+
+@property (nonatomic, copy) NSString *itemName;
+@property (nonatomic, copy) NSString *serialNumber;
+@property (nonatomic) int valueInDollars;
+@property (nonatomic, strong) NSDate *dateCreated;
 
 + (instancetype)randomItem;
 
@@ -23,17 +22,5 @@
                     serialNumber:(NSString *)sNumber;
 
 - (instancetype)initWithItemName:(NSString *)name;
-
-// 下面这些存取方法用属性声明时可以不写。
-- (void)setItemName:(NSString *)name;
-- (NSString *)itemName;
-
-- (void)setSerialNumber:(NSString *)number;
-- (NSString *)serialNumber;
-
-- (void)setValueInDollars:(int)dallors;
-- (int)valueInDollars;
-
-- (NSDate *)dateCreated;
 
 @end

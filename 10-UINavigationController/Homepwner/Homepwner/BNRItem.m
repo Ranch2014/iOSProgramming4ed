@@ -34,6 +34,7 @@
                                     '0' + arc4random() % 10,
                                     'A' + arc4random() % 26,
                                     '0' + arc4random() % 10];
+    
     BNRItem *newItem = [[self alloc] initWithItemName:randomName
                                        valueInDollars:randomValue
                                          serialNumber:randomSerialNumber];
@@ -68,64 +69,6 @@
     
     // 返回初始化后的对象的新地址
     return self;
-}
-
-//- (void)setItemName:(NSString *)name
-//{
-//    _itemName = name;
-//}
-//
-//- (NSString *)itemName
-//{
-//    return _itemName;
-//}
-//
-//- (void)setSerialNumber:(NSString *)number
-//{
-//    _serialNumber = number;
-//}
-//
-//- (NSString *)serialNumber
-//{
-//    return _serialNumber;
-//}
-//
-//- (void)setValueInDollars:(int)dallors
-//{
-//    _valueInDollars = dallors;
-//}
-//
-//- (int)valueInDollars
-//{
-//    return _valueInDollars;
-//}
-//
-//- (NSDate *)dateCreated
-//{
-//    return _dateCreated;
-//}
-
-- (void)setContainedItem:(BNRItem *)item
-{
-    _containedItem = item;
-    
-    // 将 item 加入容纳它的 BNRItem 对象时，会将它的 container 实例变量指向容纳它的对象。(??不理解啥意思??)
-    item.container = self;
-}
-
-- (BNRItem *)containedItem
-{
-    return _containedItem;
-}
-
-- (void)setContainer:(BNRItem *)item
-{
-    _container = item;
-}
-
-- (BNRItem *)container
-{
-    return _container;
 }
 
 // 重写 description 方法

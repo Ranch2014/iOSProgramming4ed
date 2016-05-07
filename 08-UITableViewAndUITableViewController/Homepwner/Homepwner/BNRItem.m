@@ -70,41 +70,6 @@
     return self;
 }
 
-- (void)setItemName:(NSString *)name
-{
-    _itemName = name;
-}
-
-- (NSString *)itemName
-{
-    return _itemName;
-}
-
-- (void)setSerialNumber:(NSString *)number
-{
-    _serialNumber = number;
-}
-
-- (NSString *)serialNumber
-{
-    return _serialNumber;
-}
-
-- (void)setValueInDollars:(int)dallors
-{
-    _valueInDollars = dallors;
-}
-
-- (int)valueInDollars
-{
-    return _valueInDollars;
-}
-
-- (NSDate *)dateCreated
-{
-    return _dateCreated;
-}
-
 // 重写 description 方法
 - (NSString *)description
 {

@@ -16,7 +16,6 @@
 		468645191CB12A2700D666BF /* HypnosisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 468645181CB12A2700D666BF /* HypnosisterTests.m */; };
 		468645241CB12A2700D666BF /* HypnosisterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 468645231CB12A2700D666BF /* HypnosisterUITests.m */; };
 		468645331CB12B1E00D666BF /* BNRHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 468645321CB12B1E00D666BF /* BNRHypnosisView.m */; settings = {ASSET_TAGS = (); }; };
-		46F73F991CB139FE00E29A8E /* BNRHypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F73F981CB139FE00E29A8E /* BNRHypnosisViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +54,6 @@
 		468645251CB12A2700D666BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		468645311CB12B1E00D666BF /* BNRHypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRHypnosisView.h; sourceTree = "<group>"; };
 		468645321CB12B1E00D666BF /* BNRHypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRHypnosisView.m; sourceTree = "<group>"; };
-		46F73F971CB139FE00E29A8E /* BNRHypnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRHypnosisViewController.h; sourceTree = "<group>"; };
-		46F73F981CB139FE00E29A8E /* BNRHypnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRHypnosisViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +108,6 @@
 				468645021CB12A2700D666BF /* AppDelegate.m */,
 				468645311CB12B1E00D666BF /* BNRHypnosisView.h */,
 				468645321CB12B1E00D666BF /* BNRHypnosisView.m */,
-				46F73F971CB139FE00E29A8E /* BNRHypnosisViewController.h */,
-				46F73F981CB139FE00E29A8E /* BNRHypnosisViewController.m */,
 				468645041CB12A2700D666BF /* ViewController.h */,
 				468645051CB12A2700D666BF /* ViewController.m */,
 				468645071CB12A2700D666BF /* Main.storyboard */,
@@ -284,7 +279,6 @@
 				468645031CB12A2700D666BF /* AppDelegate.m in Sources */,
 				468645331CB12B1E00D666BF /* BNRHypnosisView.m in Sources */,
 				468645001CB12A2700D666BF /* main.m in Sources */,
-				46F73F991CB139FE00E29A8E /* BNRHypnosisViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

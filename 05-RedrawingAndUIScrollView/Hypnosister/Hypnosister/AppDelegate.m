@@ -19,19 +19,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    CGRect screenRect = self.window.bounds;
-//    CGRect bigRect = screenRect;
-//    bigRect.size.width *= 2.0;
-//    bigRect.size.height *= 2.0;
-//    
-//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
-//    [self.window addSubview:scrollView];
-//    
-//    BNRHypnosisView *hy = [[BNRHypnosisView alloc] initWithFrame:bigRect];
-//    [scrollView addSubview:hy];
-//    
-//    scrollView.contentSize = bigRect.size;
-    
     return YES;
 }
 

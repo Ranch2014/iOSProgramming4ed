@@ -1,13 +1,14 @@
 //
 //  AppDelegate.m
-//  Hypnosister
+//  Homepwner
 //
-//  Created by 焦相如 on 4/3/16.
+//  Created by 焦相如 on 4/13/16.
 //  Copyright © 2016 jaxer. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "BNRHypnosisView.h"
+#import "BNRItemsViewController.h"
+#import "BNRItemStore.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [self setRootView];
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+/** 设置根目录 */
+- (void)setRootView {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    BNRItemsViewController *itemsVC = [[BNRItemsViewController alloc] init];
+    
+    // 创建 UINavigationController 对象，该对象的栈只包含 itemsVC
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:itemsVC];
+    
+    self.window.rootViewController = nav;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
