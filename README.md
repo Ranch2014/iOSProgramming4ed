@@ -13,6 +13,7 @@
 第 9 章  编辑 UITableView  
 第 10 章  UINavigationController  
 第 11 章  相机  
+第 12 章  触摸事件和 UIResponder  
 
 
 原书代码地址：[https://github.com/dingdaojun/iOSProgramming4ed](https://github.com/dingdaojun/iOSProgramming4ed)
