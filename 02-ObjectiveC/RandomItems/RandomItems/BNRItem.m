@@ -10,6 +10,8 @@
 
 @implementation BNRItem
 
+@synthesize something = _something;
+
 + (instancetype)randomItem
 {
     NSArray *randomAdjectiveList = @[@"Fluffy", @"Rusty", @"Shiny"];
@@ -34,6 +36,7 @@
                                     '0' + arc4random() % 10,
                                     'A' + arc4random() % 26,
                                     '0' + arc4random() % 10];
+    //注意 self，因为randomItem是类方法，所以self是指BNRItem类自身而不是某个对象。
     BNRItem *newItem = [[self alloc] initWithItemName:randomName
                                        valueInDollars:randomValue
                                          serialNumber:randomSerialNumber];
@@ -45,6 +48,17 @@
 {
     return [self initWithItemName:@"Item"];
 }
+
+- (NSString *)something
+{
+    return @"";
+}
+
+- (void)setSomething:(NSString *)something
+{
+
+}
+
 
 - (instancetype)initWithItemName:(NSString *)name
 {

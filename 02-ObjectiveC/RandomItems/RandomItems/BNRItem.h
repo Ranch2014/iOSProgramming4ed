@@ -17,8 +17,10 @@
     
     // 测试强引用循环
     BNRItem *_containedItem;
-    BNRItem *_container;
+    __weak BNRItem *_container; //测试强引用循环
 }
+
+@property (nonatomic, copy) NSString *something;
 
 + (instancetype)randomItem;
 

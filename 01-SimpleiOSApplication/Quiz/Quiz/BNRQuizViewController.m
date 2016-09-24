@@ -24,6 +24,7 @@
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     // 调用父类实现的初始化方法 (为了确保用户在看到应用界面时，数组已经存储了所需的问题和答案，必须在 BNRQuizViewController 对象创建完毕之后立即创建数组)
+    // BNRQuizViewController 对象创建完毕后会收到消息：initWithNibName:bundle:
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
     if (self) {
